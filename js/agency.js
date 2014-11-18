@@ -56,13 +56,13 @@ document.getElementById("RSVPsubmit").onclick = function CheckRsvp()
 	{
 		var displayString;
 		var displayCounter = 0;
-		displayString = "<ul>";
+		displayString = "<div class=\"row col-md-6 col-md-offset-3\" style=\"margin-top:25px;\"><div class=\"table-responsive\"><table class=\"table\" style=\"border:none;\"><tr style=\"border:0;\"><th style=\"text-align:center;border-top:0px;\"><h4>Name</h4></th><th style=\"text-align:center;border-top:0px;\"><h4>Attending?</h4></th></tr>";
 		while(displayCounter < guestList[counter].length)
 		{
-			displayString = displayString + "<li>" + guestList[counter][displayCounter] + "<div class=\"radio\"><label><input type=\"radio\" name=\"optionsRadios"+ displayCounter +"\" id=\"optionsRadios1\" value=\"option1\" checked>Yes</label></div><div class=\"radio\"><label><input type=\"radio\" name=\"optionsRadios"+ displayCounter +"\" id=\"optionsRadios2\" value=\"option2\">No</label></div></li>";
+			displayString = displayString + "<tr style=\"\"><td style=\"vertical-align:middle;text-align:center;border-top:0px;\"><h4>" + guestList[counter][displayCounter] + "</h4></td><td style=\"text-align:center;border-top:0px;\"><div class=\"radio\" style=\"display:inline-block;\"><label><input type=\"radio\" name=\"optionsRadios"+ displayCounter +"\" id=\"optionsRadios1\" value=\"option1\">Yes</label></div><div class=\"radio\" style=\"display:inline-block;margin-left:25px;\"><label><input type=\"radio\" name=\"optionsRadios"+ displayCounter +"\" id=\"optionsRadios2\" value=\"option2\">No</label></div></td></tr>";
 			displayCounter++;
 		}
-		displayString = displayString + "</ul>";
+		displayString = displayString + "</table></div></div>";
 		document.getElementById("displayNames").innerHTML = displayString;
 		document.getElementById("displayNames").style.display = "block";
 	}
