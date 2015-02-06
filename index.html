@@ -422,7 +422,23 @@
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
-
+<div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Thank You</h4>
+      </div>
+      <div class="modal-body">
+        Your response has been recorded.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
@@ -441,6 +457,13 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        if(window.location.href.indexOf("reponseModal") > -1) {
+            $("#responseModal").modal('show')
+        }
+    });
+</script>
 <script>
      jQuery(document).ready(function($) {
  

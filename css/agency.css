@@ -3,7 +3,10 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
+#nameFun:focus, #TheseComment:focus {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(250,125,120,.6) !important;
+    border-color: #fb7d78 !important;
+}
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
